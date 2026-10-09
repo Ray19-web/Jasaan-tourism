@@ -1,0 +1,6 @@
+<?php
+
+// Copy this file to gemini.local.php and paste the API key from Google AI Studio.
+return [
+    'api_key' => 'PASTE_YOUR_GEMINI_API_KEY_HERE',
+];

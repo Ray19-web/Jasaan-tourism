@@ -1,0 +1,63 @@
+.kuya-jha {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1200;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.kuya-jha__toggle {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 28px var(--primary-20);
+}
+
+.kuya-jha__toggle:hover { background: var(--primary-dark); }
+
+.kuya-jha__panel {
+  width: min(390px, calc(100vw - 32px));
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid var(--primary-20);
+  border-radius: 8px;
+  background: var(--surface-plain);
+  box-shadow: 0 24px 56px rgba(15, 23, 42, 0.24);
+}
+
+.kuya-jha__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 16px;
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.kuya-jha__eyebrow { display: block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em; }
+.kuya-jha__header h2 { margin: 3px 0 0; font-size: 19px; }
+.kuya-jha__tagline { margin: 3px 0 0; font-size: 11px; font-weight: 700; letter-spacing: 0; opacity: 0.9; }
+.kuya-jha__close { width: 34px; height: 34px; border: 0; border-radius: 6px; background: rgba(255,255,255,0.14); color: #ffffff; cursor: pointer; }
+.kuya-jha__messages { min-height: 260px; max-height: min(440px, 55vh); overflow-y: auto; padding: 16px; background: var(--surface-muted); }
+.kuya-jha__message { max-width: 88%; width: fit-content; margin: 0 0 10px; padding: 10px 12px; border-radius: 8px; font-size: 14px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.kuya-jha__message--assistant { background: var(--surface-strong); color: var(--text-main); border: 1px solid var(--primary-20); }
+.kuya-jha__message--visitor { margin-left: auto; background: var(--primary); color: #ffffff; }
+.kuya-jha__highlight { color: var(--primary-dark); font-weight: 800; }
+.kuya-jha__bullet { color: var(--primary); font-weight: 900; }
+.kuya-jha__form { display: grid; grid-template-columns: minmax(0, 1fr) 46px; gap: 8px; padding: 12px; border-top: 1px solid var(--primary-20); background: var(--surface-strong); }
+.kuya-jha__form textarea { width: 100%; min-height: 44px; resize: none; padding: 10px; border: 1px solid var(--primary-20); border-radius: 6px; color: var(--text-main); background: var(--surface-plain); font: inherit; font-size: 14px; }
+.kuya-jha__form textarea:focus { outline: 2px solid var(--primary-20); border-color: var(--primary); }
+.kuya-jha__form button { border: 0; border-radius: 6px; background: var(--primary); color: #ffffff; cursor: pointer; }
+.kuya-jha__form button:disabled { cursor: wait; opacity: 0.6; }
+html.dark-mode .kuya-jha__highlight, html.dark-mode .kuya-jha__bullet { color: var(--primary-dark); }
+@media (max-width: 560px) { .kuya-jha { right: 16px; bottom: 16px; } .kuya-jha__toggle span { display: none; } .kuya-jha__toggle { width: 48px; justify-content: center; padding: 0; } .kuya-jha__messages { min-height: 220px; } }
